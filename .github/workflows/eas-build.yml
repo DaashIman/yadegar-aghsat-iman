@@ -20,5 +20,7 @@ jobs:
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
-      - name: Build APK with EAS
-        run: eas build -p android --non-interactive --profile preview
+      - name: Run EAS init and build
+        run: |
+          eas init --non-interactive
+          eas build -p android --non-interactive --profile preview
